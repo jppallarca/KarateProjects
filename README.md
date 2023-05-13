@@ -2,11 +2,7 @@
 A list of projects made in KarateDSL 
 
 # Directory
-src
-   |-- test
-   |   |-- java
-   |   |   |-- APITest01.feature
-   |   |   |-- TestParallel.java
+Please find the feature file and associated java file under src/test/java folder.
 
 # Executing Program
 ## Cucumber 
