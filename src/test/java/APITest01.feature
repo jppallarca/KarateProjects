@@ -1,3 +1,4 @@
+@APITest01
 Feature: Testing scenarios for TMSandbox API
 
   Background:
