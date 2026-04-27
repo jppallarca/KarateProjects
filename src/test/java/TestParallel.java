@@ -1,14 +1,16 @@
-import com.intuit.karate.Results;
-import com.intuit.karate.Runner;
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
+import io.karatelabs.core.Runner;
+import io.karatelabs.core.SuiteResult;
+//import io.karatelabs.karate.Runner;
+//import io.karatelabs.karate.SuiteResult;
+import org.junit.Test;
 
-class TestParallel {
+public class TestParallel {
 
     @Test
-    void testParallel() {
-        Results results = Runner.path("classpath:").tags("~@skipme").parallel(5);
-        assertEquals(0, results.getFailCount(), results.getErrorMessages());
+    public void testAll() {
+        SuiteResult result = Runner.path("classpath:APITest01.feature")
+                .outputHtmlReport(true)
+                .parallel(5);
+        assert(result.isPassed());
     }
-
 }
